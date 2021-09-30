@@ -2,14 +2,16 @@
 <html lang="ru">
 <head>
 		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="./styles/default.css" />
-		<link rel="stylesheet" href="./styles/first-paint.css" />
-		<link rel="stylesheet" href="./styles/styles.css" />
 		<title>Trade Fox</title>
 		<meta name="description" content="Trade Fox">
 		<meta name="keywords" content="Trade Fox">
 		<meta name="author" content="John Doe">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />    
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />   
+		<!--Styles-->
+		<link rel="stylesheet" href="./styles/default.css" />
+		<link rel="stylesheet" href="./styles/first-paint.css" />
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+		<link rel="stylesheet" href="./styles/styles.css" /> 
 </head>
 	<body>
 		<header>
@@ -100,7 +102,7 @@
 							<div class="about-info-image">
 								<picture>
 									<source srcSet="./assets/invest.avif" type="image/avif" />
-  								<source srcSet="./assets/invest.webp" type="image/webp" />
+									<source srcSet="./assets/invest.webp" type="image/webp" />
 									<img src="./assets/invest.jpg" decoding="async" loading="lazy" alt="Инвестиционная компания Trade Fox">
 								</picture>
 							</div>
@@ -109,7 +111,7 @@
 							<div class="person">
 								<picture>
 									<source srcSet="./assets/team1.avif" type="image/avif" />
-  								<source srcSet="./assets/team1.webp" type="image/webp" />
+									<source srcSet="./assets/team1.webp" type="image/webp" />
 									<img src="./assets/team1.jpg" decoding="async" loading="lazy" alt="Тимур Шайхлисламов">
 								</picture>
 								<h6 class="person-name">Тимур Шайхлисламов</h6>
@@ -118,7 +120,7 @@
 							<div class="person">
 								<picture>
 									<source srcSet="./assets/team2.avif" type="image/avif" />
-  								<source srcSet="./assets/team2.webp" type="image/webp" />
+									<source srcSet="./assets/team2.webp" type="image/webp" />
 									<img src="./assets/team2.jpg" decoding="async" loading="lazy" alt="Сергей Максяков">
 								</picture>
 								<h6 class="person-name">Сергей Максяков</h6>
@@ -127,7 +129,7 @@
 							<div class="person">
 								<picture>
 									<source srcSet="./assets/team3.avif" type="image/avif" />
-  								<source srcSet="./assets/team3.webp" type="image/webp" />
+									<source srcSet="./assets/team3.webp" type="image/webp" />
 									<img src="./assets/team3.jpg" decoding="async" loading="lazy" alt="Диана Мингазова">
 								</picture>
 								<h6 class="person-name">Диана Мингазова</h6>
@@ -136,7 +138,7 @@
 							<div class="person">
 								<picture>
 									<source srcSet="./assets/team4.avif" type="image/avif" />
-  								<source srcSet="./assets/team4.webp" type="image/webp" />
+									<source srcSet="./assets/team4.webp" type="image/webp" />
 									<img src="./assets/team4.jpg" decoding="async" loading="lazy" alt="Арслан Мухамадиев">
 								</picture>
 								<h6 class="person-name">Арслан Мухамадиев</h6>
@@ -223,7 +225,42 @@
 					</div>
 				</div>
 			</div>
+			<div class="robots" id="robots">
+				<div class="container">
+					<div class="robots-wrapper">
+						<div class="robots-info">
+							<h2 class="tobots-title">Роботы Trade Fox</h2>
+							<div class="tobots-text">
+								<p class="robots-description">
+								Робот подключается к вашему торговому счету, а доступ к депозиту остается только у вас через личный кабинет брокера, что обеспечивает дополнительную безопасность.
+							</p>
+							</div>
+							<div class="robots-logos">
+								<img src="./assets/robots-logo1.svg" alt="RoboForex">
+								<img src="./assets/robots-logo2.svg" alt="Forex4You">
+							</div>
+						</div>
+						<div class="robots-slider swiper mySwiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+								</div>
+								<div class="swiper-slide">
+									<img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
 		<footer id="contacts"></footer>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="./scripts/index.js"></script>
+
 	</body>
 </html>
