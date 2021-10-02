@@ -14,7 +14,7 @@ var swiper = new Swiper(".mySwiper", {
 		depth: 50,
 		modifier: 1,
 		slideShadows: false
-	},
+	},	
 	pagination: {
 		el: ".swiper-pagination"
 	}

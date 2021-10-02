@@ -43,11 +43,13 @@ body, html
 	color: var(--text-color)
 	font-family: var(--text-font)
 	background-color: var(--bg-color)
+	position: relative
 	&.no-scroll
 		height: 100vh
 		overflow: hidden
 	@include md
 		font-size: 14px
+
 section
 	overflow: hidden
 
@@ -56,8 +58,9 @@ ul, ol
 
 .container
 	width: 100%
-	max-width: 1120px
+	max-width: 1150px
 	margin: 0 auto
+	padding: 0 15px
 
 .col
 	flex: 0 0 auto
