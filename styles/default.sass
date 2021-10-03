@@ -13,7 +13,7 @@
 	--text-black: #000000
 	--button-color: #ffffff
 	--button-bg: #F86A2E
-	--button-bg-hover: #F86A2E
+	--button-bg-hover: #EB4B08
 	--text-font: 'Montserrat', sans-serif
 	--block-radius: 20px
 
@@ -27,8 +27,17 @@
 	--small-font-size: 14px
 	--smaller-font-size: 12px
 
-@include md
-	.hidden-md
+@for $i from 1 through 6
+	$elem: h#{$i}
+	$size: var(--#{$elem}-font-size)
+	h#{$i}
+		font-size: #{$size}
+		color: var(--title-color)
+p
+	font-size: var(--p-font-size)
+	color: var(--text-color)
+
+.hidden-md
 		display: none
 
 *
@@ -71,7 +80,29 @@ ul, ol
 	flex-wrap: wrap
 	margin: 0 -15px
 
-.hero-wrapper
-	// background-image: url("../assets/hero.png")
-	background-image: -webkit-image-set(url("../assets/hero.avif") type("image/avif"), url("../assets/hero.webp") type("image/webp"), url("../assets/hero.png") type("image/png"))
-	background-image: image-set(url("../assets/hero.avif") type("image/avif"), url("../assets/hero.webp") type("image/webp"), url("../assets/hero.png") type("image/png"))
+.button
+	display: inline-block                     
+	padding: 23px 29px 21px
+	font-weight: 400
+	font-size: 18px
+	line-height: .78
+	color: var(--title-color)
+	background-color: var(--button-bg)
+	border-radius: 16px
+	box-shadow: none
+	border: 2px solid var(--button-bg)
+	appearance: none
+	cursor: pointer
+	transition: background-color .3s ease-in-out, border-color .3s ease-in-out, color .3s ease-in-out
+	&:hover
+		background-color: var(--button-bg-hover)
+		border-color: var(--button-bg-hover)
+	&.button-secondary
+		border-color: var(--title-color)
+		background-color: transparent
+		&:hover
+			border-color: var(--title-color)
+			background-color: var(--title-color)
+			color: var(--button-bg)
+
+	

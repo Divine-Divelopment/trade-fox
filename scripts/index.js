@@ -1,4 +1,4 @@
-var swiper = new Swiper(".mySwiper", {
+var cowerflow = new Swiper(".mySwiper", {
 	effect: "coverflow",
 	grabCursor: false,
 	loop: false,
@@ -11,7 +11,7 @@ var swiper = new Swiper(".mySwiper", {
 	coverflowEffect: {
 		rotate: 0,
 		stretch: 0,
-		depth: 50,
+		depth: 100,
 		modifier: 1,
 		slideShadows: false
 	},	
@@ -19,3 +19,25 @@ var swiper = new Swiper(".mySwiper", {
 		el: ".swiper-pagination"
 	}
 });
+
+const swiper = new Swiper('.our-team-slider', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  }
+})

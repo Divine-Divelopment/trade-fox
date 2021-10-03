@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-		<meta charset="UTF-8" />
-		<title>Trade Fox</title>
-		<meta name="description" content="Trade Fox">
-		<meta name="keywords" content="Trade Fox">
-		<meta name="author" content="John Doe">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-		<meta http-equiv="refresh" content="20" />
-		<!--Styles-->
-		<link rel="stylesheet" href="./styles/default.css" />
-		<link rel="stylesheet" href="./styles/first-paint.css" />
-		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-		<link rel="stylesheet" href="./styles/styles.css" /> 
-</head>
+	<head>
+			<meta charset="UTF-8" />
+			<title>Trade Fox</title>
+			<meta name="description" content="Trade Fox">
+			<meta name="keywords" content="Trade Fox">
+			<meta name="author" content="John Doe">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+			<meta http-equiv="refresh" content="20" />
+			<!--Styles-->
+			<link rel="stylesheet" href="./styles/default.css" />
+			<link rel="stylesheet" href="./styles/first-paint.css" />
+			<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+			<link rel="stylesheet" href="./styles/styles.css" /> 
+	</head>
 	<body>
 		<header class="header">
 			<div class="container">
 				<div class="header-wrapper">
 					<div class="logo">
 						<a href="">
-							<img src="./assets/logo.svg" alt="Логотип">
+							<img src="./assets/logo.svg" width="229" height="53" alt="Логотип">
 						</a>
 					</div>
 					<div class="language-select">
 						
 					</div>
 					<nav class="navigation-wrapper">
-						<ul class="navigalion-list">
+						<ul class="navigation-list">
 							<li><a href="">О нас</a></li>
 							<li><a href="">Как это работает?</a></li>
 							<li><a href="">Тарифы</a></li>
@@ -36,7 +36,7 @@
 						</ul>
 					</nav>
 					<div class="login-wrapper">
-						<button class="button">Войти</button>
+						<button class="button login-button">Войти</button>
 					</div>
 				</div>
 			</div>
@@ -47,24 +47,35 @@
 					<div class="hero-wrapper">
 						<div class="hero-content">
 							<p class="hero-subtitle">30-дневный пробный период БЕСПЛАТНО</p>
-							<h1 class="hero-title">Научим торговать и зарабатывать до 20%</h1>
+							<h1 class="hero-title">Научим торговать и зарабатывать до 20% <span>*</span></h1>
 							<p class="hero-description">С помощью мультивалютного робота-трейдера.</p>
+							<div class="hero-buttons">
+								<button class="button">Попробывать бесплатно</button>
+								<button class="button button-secondary">Как это работает?</button>
+							</div>
+						</div>
+						<div class="hero-background">
+							<picture>
+									<source srcSet="./assets/hero.avif" type="image/avif" />
+									<source srcSet="./assets/hero.webp" type="image/webp" />
+									<img src="./assets/hero.png" decoding="async" loading="lazy" alt="Арслан Мухамадиев">
+								</picture>
 						</div>
 						<div class="advantages">
 							<div class="advantage">
-								<img class="advantage-image" src="./assets/advantage1.svg" alt="Регулярные обновления">
+								<img class="advantage-image" src="./assets/advantage1.svg" width="67" height="63" alt="Регулярные обновления">
 								<h6 class="advantage-title">Регулярные обновления</h6>
 							</div>
 							<div class="advantage">
-								<img class="advantage-image" src="./assets/advantage2.svg" alt="Круглосуточная поддержка">
+								<img class="advantage-image" src="./assets/advantage2.svg" width="63" height="63" alt="Круглосуточная поддержка">
 								<h6 class="advantage-title">Круглосуточная поддержка</h6>
 							</div>
 							<div class="advantage">
-								<img class="advantage-image" src="./assets/advantage3.svg" alt="Высокие показатели">
+								<img class="advantage-image" src="./assets/advantage3.svg" width="68" height="63" alt="Высокие показатели">
 								<h6 class="advantage-title">Высокие показатели</h6>
 							</div>
 							<div class="advantage">
-								<img class="advantage-image" src="./assets/advantage4.svg" alt="Гарантия на все роботы">
+								<img class="advantage-image" src="./assets/advantage4.svg" width="59" height="66" alt="Гарантия на все роботы">
 								<h6 class="advantage-title">Гарантия на все роботы</h6>
 							</div>
 						</div>
@@ -108,43 +119,47 @@
 								</picture>
 							</div>
 						</div>
-						<div class="our-team">
-							<div class="person">
-								<picture>
-									<source srcSet="./assets/team1.avif" type="image/avif" />
-									<source srcSet="./assets/team1.webp" type="image/webp" />
-									<img src="./assets/team1.jpg" decoding="async" loading="lazy" alt="Тимур Шайхлисламов">
-								</picture>
-								<h6 class="person-name">Тимур Шайхлисламов</h6>
-								<p class="person-position">CEO and Founder</p>
+						<div class="our-team-slider swiper">
+							<div class="our-team swiper-wrapper">
+								<div class="person">
+									<picture>
+										<source srcSet="./assets/team1.avif" type="image/avif" />
+										<source srcSet="./assets/team1.webp" type="image/webp" />
+										<img src="./assets/team1.jpg" decoding="async" loading="lazy" alt="Тимур Шайхлисламов">
+									</picture>
+									<h6 class="person-name">Тимур Шайхлисламов</h6>
+									<p class="person-position">CEO and Founder</p>
+								</div>
+								<div class="person">
+									<picture>
+										<source srcSet="./assets/team2.avif" type="image/avif" />
+										<source srcSet="./assets/team2.webp" type="image/webp" />
+										<img src="./assets/team2.jpg" decoding="async" loading="lazy" alt="Сергей Максяков">
+									</picture>
+									<h6 class="person-name">Сергей Максяков</h6>
+									<p class="person-position">Co-founder</p>
+								</div>
+								<div class="person">
+									<picture>
+										<source srcSet="./assets/team3.avif" type="image/avif" />
+										<source srcSet="./assets/team3.webp" type="image/webp" />
+										<img src="./assets/team3.jpg" decoding="async" loading="lazy" alt="Диана Мингазова">
+									</picture>
+									<h6 class="person-name">Диана Мингазова</h6>
+									<p class="person-position">PR Manager</p>
+								</div>
+								<div class="person">
+									<picture>
+										<source srcSet="./assets/team4.avif" type="image/avif" />
+										<source srcSet="./assets/team4.webp" type="image/webp" />
+										<img src="./assets/team4.jpg" decoding="async" loading="lazy" alt="Арслан Мухамадиев">
+									</picture>
+									<h6 class="person-name">Арслан Мухамадиев</h6>
+									<p class="person-position">General manager</p>
+								</div>
 							</div>
-							<div class="person">
-								<picture>
-									<source srcSet="./assets/team2.avif" type="image/avif" />
-									<source srcSet="./assets/team2.webp" type="image/webp" />
-									<img src="./assets/team2.jpg" decoding="async" loading="lazy" alt="Сергей Максяков">
-								</picture>
-								<h6 class="person-name">Сергей Максяков</h6>
-								<p class="person-position">Co-founder</p>
-							</div>
-							<div class="person">
-								<picture>
-									<source srcSet="./assets/team3.avif" type="image/avif" />
-									<source srcSet="./assets/team3.webp" type="image/webp" />
-									<img src="./assets/team3.jpg" decoding="async" loading="lazy" alt="Диана Мингазова">
-								</picture>
-								<h6 class="person-name">Диана Мингазова</h6>
-								<p class="person-position">PR Manager</p>
-							</div>
-							<div class="person">
-								<picture>
-									<source srcSet="./assets/team4.avif" type="image/avif" />
-									<source srcSet="./assets/team4.webp" type="image/webp" />
-									<img src="./assets/team4.jpg" decoding="async" loading="lazy" alt="Арслан Мухамадиев">
-								</picture>
-								<h6 class="person-name">Арслан Мухамадиев</h6>
-								<p class="person-position">General manager</p>
-							</div>
+							<div class="swiper-button-prev"></div>
+  						<div class="swiper-button-next"></div>
 						</div>
 					</div>
 				</div>
