@@ -7,11 +7,12 @@
 			<meta name="keywords" content="Trade Fox">
 			<meta name="author" content="John Doe">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-			<meta http-equiv="refresh" content="20" />
+			<!-- <meta http-equiv="refresh" content="20" /> -->
 			<!--Styles-->
 			<link rel="stylesheet" href="./styles/default.css" />
-			<link rel="stylesheet" href="./styles/first-paint.css" />
 			<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+			<link rel="stylesheet" href="./styles/first-paint.css" />
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" />
 			<link rel="stylesheet" href="./styles/styles.css" /> 
 	</head>
 	<body>
@@ -24,7 +25,10 @@
 						</a>
 					</div>
 					<div class="language-select">
-						
+						<select class="language-select-list">
+							<option value="RU" selected>RU</option>
+							<option value="EN">EN</option>
+						</select>
 					</div>
 					<nav class="navigation-wrapper">
 						<ul class="navigation-list">
@@ -119,48 +123,53 @@
 								</picture>
 							</div>
 						</div>
-						<div class="our-team-slider swiper">
-							<div class="our-team swiper-wrapper">
-								<div class="person">
-									<picture>
-										<source srcSet="./assets/team1.avif" type="image/avif" />
-										<source srcSet="./assets/team1.webp" type="image/webp" />
-										<img src="./assets/team1.jpg" decoding="async" loading="lazy" alt="Тимур Шайхлисламов">
-									</picture>
-									<h6 class="person-name">Тимур Шайхлисламов</h6>
-									<p class="person-position">CEO and Founder</p>
+						<div class="slider-wrapper">
+							<div class="our-team-slider swiper">
+								<div class="our-team swiper-wrapper">
+									<div class="swiper-slide person">
+										<picture>
+											<source srcSet="./assets/team1.avif" type="image/avif" />
+											<source srcSet="./assets/team1.webp" type="image/webp" />
+											<img src="./assets/team1.jpg" decoding="async" loading="lazy" alt="Тимур Шайхлисламов">
+										</picture>
+										<h6 class="person-name">Тимур Шайхлисламов</h6>
+										<p class="person-position">CEO and Founder</p>
+									</div>
+									
+									<div class="swiper-slide person">
+										<picture>
+											<source srcSet="./assets/team2.avif" type="image/avif" />
+											<source srcSet="./assets/team2.webp" type="image/webp" />
+											<img src="./assets/team2.jpg" decoding="async" loading="lazy" alt="Сергей Максяков">
+										</picture>
+										<h6 class="person-name">Сергей Максяков</h6>
+										<p class="person-position">Co-founder</p>
+									</div>
+									<div class="swiper-slide person">
+										<picture>
+											<source srcSet="./assets/team3.avif" type="image/avif" />
+											<source srcSet="./assets/team3.webp" type="image/webp" />
+											<img src="./assets/team3.jpg" decoding="async" loading="lazy" alt="Диана Мингазова">
+										</picture>
+										<h6 class="person-name">Диана Мингазова</h6>
+										<p class="person-position">PR Manager</p>
+									</div>
+									<div class="swiper-slide person">
+										<picture>
+											<source srcSet="./assets/team4.avif" type="image/avif" />
+											<source srcSet="./assets/team4.webp" type="image/webp" />
+											<img src="./assets/team4.jpg" decoding="async" loading="lazy" alt="Арслан Мухамадиев">
+										</picture>
+										<h6 class="person-name">Арслан Мухамадиев</h6>
+										<p class="person-position">General manager</p>
+									</div>
 								</div>
-								<div class="person">
-									<picture>
-										<source srcSet="./assets/team2.avif" type="image/avif" />
-										<source srcSet="./assets/team2.webp" type="image/webp" />
-										<img src="./assets/team2.jpg" decoding="async" loading="lazy" alt="Сергей Максяков">
-									</picture>
-									<h6 class="person-name">Сергей Максяков</h6>
-									<p class="person-position">Co-founder</p>
-								</div>
-								<div class="person">
-									<picture>
-										<source srcSet="./assets/team3.avif" type="image/avif" />
-										<source srcSet="./assets/team3.webp" type="image/webp" />
-										<img src="./assets/team3.jpg" decoding="async" loading="lazy" alt="Диана Мингазова">
-									</picture>
-									<h6 class="person-name">Диана Мингазова</h6>
-									<p class="person-position">PR Manager</p>
-								</div>
-								<div class="person">
-									<picture>
-										<source srcSet="./assets/team4.avif" type="image/avif" />
-										<source srcSet="./assets/team4.webp" type="image/webp" />
-										<img src="./assets/team4.jpg" decoding="async" loading="lazy" alt="Арслан Мухамадиев">
-									</picture>
-									<h6 class="person-name">Арслан Мухамадиев</h6>
-									<p class="person-position">General manager</p>
-								</div>
+								
 							</div>
 							<div class="swiper-button-prev"></div>
   						<div class="swiper-button-next"></div>
 						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -176,7 +185,7 @@
 								<button class="button button-secondary">Посмотреть тарифы</button>
 							</div>
 							<div class="how-it-works-image">
-								<img src="./assets/info1.svg" alt="Что такое робот Trade Fox">
+								<img src="./assets/info1.svg" width="564" height="378" alt="Что такое робот Trade Fox">
 							</div>
 						</div>
 						<div class="how-it-works-info-block reverse">
@@ -187,10 +196,11 @@
 								</p>
 							</div>
 							<div class="how-it-works-image">
-								<img src="./assets/info2.svg" alt="Установка робота">
+								<img src="./assets/info2.svg" width="471" height="433" alt="Установка робота">
 							</div>
 						</div>
-						<div class="how-it-works-info">
+						<div class="how-it-works-info-block">
+							<div class="how-it-works-info">
 								<h3 class="how-it-works-title">Чем торгует робот?</h3>
 								<p class="how-it-works-description">
 									Торговля ведется по 12 валютным парам, которые наиболее подходят под наши алгоритмы.  Для каждой валютной пары подобраны индивидуальные настройки, обеспечивающие наилучшие результаты при наименьших рисках.
@@ -198,7 +208,7 @@
 								<button class="button">Попробывать бесплатно</button>
 							</div>
 							<div class="how-it-works-image">
-								<img src="./assets/info3.svg" alt="Что такое робот Trade Fox">
+								<img src="./assets/info3.svg" width="539" height="484" alt="Что такое робот Trade Fox">
 							</div>
 						</div>
 						<div class="how-it-works-info-block reverse">
@@ -209,7 +219,7 @@
 								</p>
 							</div>
 							<div class="how-it-works-image">
-								<img src="./assets/info4.svg" alt="Установка робота">
+								<img src="./assets/info4.svg" width="533" height="473" alt="Установка робота">
 							</div>
 						</div>
 					</div>
@@ -218,25 +228,28 @@
 			<div class="working-cycle">
 				<div class="container">
 					<div class="working-cycle-wrapper">
-						<div class="working-cycle-item">
-							<img src="./assets/works1.svg" alt="Регистрация">
-							<h6 class="working-cycle-title">Регистрация</h6>
-							<p class="working-cycle-description">Регистрация на брокере, открытие торгового счёта.</p>
-						</div>
-						<div class="working-cycle-item">
-							<img src="./assets/works2.svg" alt="Заключение договора">
-							<h6 class="working-cycle-title">Заключение договора</h6>
-							<p class="working-cycle-description">Подписываем договор и отправляем его заказным письмом.</p>
-						</div>
-						<div class="working-cycle-item">
-							<img src="./assets/works3.svg" alt="Оплата">
-							<h6 class="working-cycle-title">Оплата</h6>
-							<p class="working-cycle-description">Выставление счета, оплата программы.</p>
-						</div>
-						<div class="working-cycle-item">
-							<img src="./assets/works4.svg" alt="Установка робота">
-							<h6 class="working-cycle-title">Установка робота</h6>
-							<p class="working-cycle-description">Установка программы на Ваш удаленный компьютер.</p>
+						<h2 class="working-cycle-title">Как мы работаем?</h2>
+						<div class="working-cycle-items">
+							<div class="working-cycle-item">
+								<img src="./assets/works1.svg" width="67" height="70" alt="Регистрация">
+								<h6 class="working-cycle-title">Регистрация</h6>
+								<p class="working-cycle-description">Регистрация на брокере, открытие торгового счёта.</p>
+							</div>
+							<div class="working-cycle-item">
+								<img src="./assets/works2.svg" width="70" height="70" alt="Заключение договора">
+								<h6 class="working-cycle-title">Заключение договора</h6>
+								<p class="working-cycle-description">Подписываем договор и отправляем его заказным письмом.</p>
+							</div>
+							<div class="working-cycle-item">
+								<img src="./assets/works3.svg" width="53" height="70" alt="Оплата">
+								<h6 class="working-cycle-title">Оплата</h6>
+								<p class="working-cycle-description">Выставление счета, оплата программы.</p>
+							</div>
+							<div class="working-cycle-item">
+								<img src="./assets/works4.svg" width="71" height="70" alt="Установка робота">
+								<h6 class="working-cycle-title">Установка робота</h6>
+								<p class="working-cycle-description">Установка программы на Ваш удаленный компьютер.</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -246,15 +259,18 @@
 					<div class="robots-wrapper">
 						<div class="robots-info">
 							<h2 class="tobots-title">Роботы Trade Fox</h2>
-							<div class="tobots-text">
-								<p class="robots-description">
-								Робот подключается к вашему торговому счету, а доступ к депозиту остается только у вас через личный кабинет брокера, что обеспечивает дополнительную безопасность.
-							</p>
+							<div class="robots-about">
+								<div class="tobots-text">
+									<p class="robots-description">
+										Робот подключается к вашему торговому счету, а доступ к депозиту остается только у вас через личный кабинет брокера, что обеспечивает дополнительную безопасность.
+									</p>
+								</div>
+								<div class="robots-logos">
+									<img src="./assets/robots-logo1.svg" width="188" height="28" alt="RoboForex">
+									<img src="./assets/robots-logo2.svg" width="164" height="28" alt="Forex4You">
+								</div>
 							</div>
-							<div class="robots-logos">
-								<img src="./assets/robots-logo1.svg" alt="RoboForex">
-								<img src="./assets/robots-logo2.svg" alt="Forex4You">
-							</div>
+							
 						</div>
 						<div class="robots-slider swiper mySwiper">
 							<div class="swiper-wrapper">
@@ -314,7 +330,9 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">Как долго будет работать робот?</h6>
+										<h6 class="question-title">Как долго будет работать робот?
+											<span class="arrow"></span>
+										</h6>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>
@@ -323,7 +341,9 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">Насколько надёжен продукт и какие гарантии вы даёте?</h6>
+										<h6 class="question-title">Как долго будет работать робот?
+											<span class="arrow"></span>
+										</h6>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>
@@ -332,7 +352,9 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">Сколько можно заработать с роботом?</h6>
+										<h6 class="question-title">Насколько надёжен продукт и какие гарантии вы даёте?
+											<span class="arrow"></span>
+										</h6>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>
@@ -341,7 +363,9 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">С какой суммы можно начать? </h6>
+										<h6 class="question-title">Насколько надёжен продукт и какие гарантии вы даёте?
+											<span class="arrow"></span>
+										</h6>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>
@@ -350,7 +374,10 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">Как долго будет работать робот?</h6>
+										<h6 class="question-title">
+											Сколько можно заработать с роботом?
+											<span class="arrow"></span>
+										</h6>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>
@@ -359,7 +386,10 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">Насколько надёжен продукт и какие гарантии вы даёте?</h6>
+										<h6 class="question-title">
+											Сколько можно заработать с роботом?
+											<span class="arrow"></span>
+										</h6>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>
@@ -368,7 +398,10 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">Сколько можно заработать с роботом?</h6>
+										<h6 class="question-title">
+											С какой суммы можно начать?
+											<span class="arrow"></span>
+										</h6>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>
@@ -377,7 +410,10 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">С какой суммы можно начать?</h6>
+										<h6 class="question-title">
+										С какой суммы можно начать?
+										<span class="arrow"></span>
+									</h6>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>
@@ -395,22 +431,22 @@
 						<h2 class="footer-title">Остались вопросы?</h2>
 						<a href="tel:+79600389788" class="phone-link">+7 (960) 038-97-88</a>
 						<a href="mailto:info@trade-fox.com" class="white-link">info@trade-fox.com</a>
-						<p class="white-text">г.Казань, ул. Дзержинского 12</p>
+						<p class="white-text address">г.Казань, ул. Дзержинского 12</p>
 						<ul class="social-links">
 							<li>
 								<a href="">
-									<img src="./assets/social1.svg" alt="Instagram">
+									<img src="./assets/social1.svg" width="31" height="30" alt="Instagram">
 								</a>
 							</li>
 							<li>
 								<a href="">
-									<img src="./assets/social2.svg" alt="Telegram">
+									<img src="./assets/social2.svg" width="31" height="30" alt="Telegram">
 								</a>
 							</li>
 						</ul>
-						<p class="footer-text">ИП Шайхлисламов Т.Ф. ИНН 026402379255</p>
+						<p class="footer-text ip-info">ИП Шайхлисламов Т.Ф. ИНН 026402379255</p>
 						<a href="" class="footer-link">Политика конфиденциальности</a>
-						<p class="footer-text">
+						<p class="footer-text develop">
 							Сайт разработан: 
 							<a href="" class="footer-link">MonkeyGarden</a>
 						</p>
@@ -432,6 +468,7 @@
 			</div>
 		</footer>
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/ts-select2@0.1.0/dist/ts-select2.min.js"></script>
 		<script src="./scripts/index.js"></script>
 
 	</body>

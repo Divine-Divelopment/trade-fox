@@ -14,6 +14,71 @@
 	align-content: center
 	justify-content: space-between
 
+.language-select
+	margin-left: auto
+	margin-right: 30px
+	.selected-element	
+		display: flex
+		align-items: center
+		align-content: center
+		justify-content: center
+	.select2-container--default 
+		font-size: 16px
+		font-weight: 500
+		.select2-selection--single 
+			background-color: transparent
+			border: none
+			border-radius: 0
+			height: 35px
+			.select2-selection__rendered
+				display: inline-block
+				color: #ffffff
+				line-height: 35px
+				padding-left: 10px
+				.selection-text
+					padding-left: 11px
+span.select2-container--default 
+	font-size: 16px
+	font-weight: 500
+	.select2-dropdown
+			background-color: transparent
+			border: none
+			border-radius: 5px !important
+			overflow: hidden
+	.select2-results__option--highlighted.select2-results__option--selectable
+		background-color: transparent 
+		color: #ffffff 
+	.select2-results__options
+		background-color: #2D2E35
+	.select2-results__option
+		padding: 5px 10px
+		color: #ffffff
+		.selected-element
+			display: flex
+			align-items: center
+			align-content: center
+			justify-content: flex-start
+			position: relative
+			.selection-text
+				padding-left: 11px
+			&:after 
+				content: ''
+				display: block
+				width: 5px
+				height: 5px
+				border-radius: 5px
+				background-color: transparent
+				position: absolute
+				top: 50%
+				right: 0
+				transform: translateY(-50%)
+				transition: background-color .3s ease-in-out
+	.select2-results__option--selected
+		background-color: transparent
+		.selected-element
+			&:after 
+				background-color: var(--accent-color)
+
 .login-button 
 	text-transform: uppercase
 
