@@ -41,7 +41,7 @@ const select2 = new TsSelect2(
 	}
 );
 
-var cowerflow = new Swiper('.mySwiper', {
+var cowerflow = new Swiper('.our-plans-slider', {
 	effect: 'coverflow',
 	grabCursor: false,
 	loop: false,
@@ -50,7 +50,8 @@ var cowerflow = new Swiper('.mySwiper', {
 	initialSlide: 1,
 	dragable: false,
 	noSwiping: false,
-	mousewheel: false,
+	allowSlidePrev: false,
+	allowSlideNext: false,
 	coverflowEffect: {
 		rotate: 0,
 		stretch: 0,

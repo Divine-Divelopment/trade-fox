@@ -25,6 +25,11 @@
 	.select2-container--default 
 		font-size: 16px
 		font-weight: 500
+		&.select2-container--open
+			.select2-selection--single
+				.select2-selection__arrow
+					b
+						transform: rotateX(0)
 		.select2-selection--single 
 			background-color: transparent
 			border: none
@@ -37,6 +42,19 @@
 				padding-left: 10px
 				.selection-text
 					padding-left: 11px
+			.select2-selection__arrow
+				b
+					display: block
+					width: 10px
+					height: 10px
+					background-image: url('../assets/arrow.svg')
+					background-position: center
+					background-size: contain
+					border: none
+					transform: rotateX(180deg)
+					margin-left: -5px
+					margin-top: -5px
+					transition: transform .3s ease-in-out
 span.select2-container--default 
 	font-size: 16px
 	font-weight: 500

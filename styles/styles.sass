@@ -190,13 +190,67 @@
 .robots-slider 
 	margin-top: 100px
 	margin-bottom: 30px
+	.swiper-pagination
+		display: none
 	.swiper-slide 
 		width: 400px
 		padding: 40px
 		background-color: var(--bg-color-darken)
 		img
 			width: 100%
-				object-fit: cover
+			object-fit: cover
+	.card
+		&.accent
+			--title-color: var(--accent-color)
+		&.red
+			--title-color: var(--red-color)
+		&.green
+			--title-color: var(--green-color)
+		&-subtitle
+			--title-color: #424344
+		&-title
+			line-height: .9
+		&-price
+			--p-font-size: 42px
+			--text-color: #FFFFFF	
+			margin-top: 35px
+			font-weight: 700
+			line-height: 30px
+		&-buttons
+			display: flex
+			align-items: center
+			align-content: center
+			gap: 30px
+			margin-top: 33px
+			a 
+				font-weight: 600
+				font-size: var(--p-font-size)
+				line-height: 1.33
+				color: var(--accent-color)
+				text-decoration: none
+				transition: color .3s ease-in-out
+				&:hover 
+					color: #EB4B08
+		&-list
+			list-style-type: none
+			margin-top: 35px
+			li
+				list-style-position: inside
+				margin-bottom: 12px
+				p 
+					--p-color: #74777E
+					--p-font-size: var(--small-font-size)
+					display: inline-block
+					line-height: 1
+				&:before 
+					content: ''
+					display: inline-block
+					width: 10px
+					height: 10px
+					border-radius: 10px
+					background-color: var(--title-color)
+					line-height: 1
+					margin-right: 13px
 
 .questions
 	margin-top: 100px
