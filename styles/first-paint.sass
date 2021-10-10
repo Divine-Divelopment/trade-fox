@@ -5,18 +5,27 @@
 	top: 0
 	left: 0
 	background-color: var(--bg-color)
-	padding: 45px 0 15px
+	padding: 20px 0
 	z-index: 100
+	@include sm
+		position: static
 
 .header-wrapper 
 	display: flex
 	align-items: center
 	align-content: center
 	justify-content: space-between
+	@include sm
+		flex-wrap: wrap
+		align-content: space-between
 
 .language-select
 	margin-left: auto
 	margin-right: 30px
+	@include md
+		margin-right: 15px
+	@include sm
+		margin-left: 0
 	.selected-element	
 		display: flex
 		align-items: center
@@ -29,6 +38,7 @@
 			.select2-selection--single
 				.select2-selection__arrow
 					b
+						margin-top: -3px
 						transform: rotateX(0)
 		.select2-selection--single 
 			background-color: transparent
@@ -101,11 +111,24 @@ span.select2-container--default
 	text-transform: uppercase
 
 .logo
+	max-width: 40%
+	@include sm
+		display: flex
+		align-items: center
+		align-content: center
+		justify-content: center
+		width: 100%
+		max-width: 100%
+		margin-bottom: 10px
 	a
 		display: inline-block
+		img
+			max-width: 100%
 
 .navigation-wrapper 
 	display: inline-block
+	@include md
+		display: none
 
 .navigation-list
 	display: flex
@@ -129,6 +152,12 @@ span.select2-container--default
 	flex-direction: column
 	position: relative
 	padding: 60px 0 28px
+	@include md
+		padding: 40px 0 20px
+	@include sm
+		padding: 30px 0 0
+	@include xs
+		padding-top: 15px
 
 .hero-background
 	position: absolute
@@ -140,17 +169,29 @@ span.select2-container--default
 	img, picture
 		width: 100%
 		height: auto
+	@include md
+		display: none
 
 .hero-content 
 	position: relative
 	z-index: 1
 	max-width: 52%
+	@include md
+		max-width: 100%
 
 .hero-buttons
 	margin-top: 40px
 	.button
 		&+.button
 			margin-left: 20px
+	@include sm
+		margin-top: 15px
+		flex-direction: column
+		.button
+			width: 100%
+			&+.button
+				margin-left: 0
+				margin-top: 15px
 
 .hero-title
 	line-height: 1.25
@@ -178,6 +219,12 @@ span.select2-container--default
 	margin-top: 80px
 	position: relative
 	z-index: 1
+	@include md
+		flex-wrap: wrap
+		margin-top: 50px
+	@include sm
+		margin-top: 40px
+
 
 .advantage
 	display: flex
@@ -189,6 +236,10 @@ span.select2-container--default
 	padding: 50px 50px 40px
 	background-color: var(--bg-color-darken)
 	border-radius: var(--block-radius)
+	@include md
+		flex: 1 1 calc(50% - 15px)
+	@include sm
+		min-width: 280px
 	&-title
 		margin-top: 21px
 		font-weight: 400

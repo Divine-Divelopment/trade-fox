@@ -32,11 +32,11 @@
 					</div>
 					<nav class="navigation-wrapper">
 						<ul class="navigation-list">
-							<li><a href="">О нас</a></li>
-							<li><a href="">Как это работает?</a></li>
-							<li><a href="">Тарифы</a></li>
-							<li><a href="">FAQ</a></li>
-							<li><a href="">Контакты</a></li>
+							<li><a class="hader-link" href="#about-us">О нас</a></li>
+							<li><a class="hader-link" href="#how-it-works">Как это работает?</a></li>
+							<li><a class="hader-link" href="#tarrifs">Тарифы</a></li>
+							<li><a class="hader-link" href="#faq">FAQ</a></li>
+							<li><a class="hader-link" href="#contacts">Контакты</a></li>
 						</ul>
 					</nav>
 					<div class="login-wrapper">
@@ -60,9 +60,9 @@
 						</div>
 						<div class="hero-background">
 							<picture>
-									<source srcSet="./assets/hero.avif" type="image/avif" />
-									<source srcSet="./assets/hero.webp" type="image/webp" />
-									<img src="./assets/hero.png" decoding="async" loading="lazy" alt="Арслан Мухамадиев">
+									<source srcset="./assets/hero.avif 1x, ./assets/hero2x.avif 2x" type="image/avif" />
+									<source srcset="./assets/hero.webp 1x, ./assets/hero2x.webp 2x" type="image/webp" />
+									<img src="./assets/hero.png" srcset="./assets/hero2x.png 2x" decoding="async" loading="lazy" alt="Арслан Мухамадиев">
 								</picture>
 						</div>
 						<div class="advantages">
@@ -168,12 +168,13 @@
 							</div>
 							<div class="swiper-button-prev"></div>
   						<div class="swiper-button-next"></div>
+  						<div class="team-pagination dot-pagination"></div>
 						</div>
 						
 					</div>
 				</div>
 			</div>
-			<div class="how-it-works" id="how-it-works">
+			<div class="how-it-works">
 				<div class="container">
 					<div class="how-it-works-wrapper">
 						<div class="how-it-works-info-block">
@@ -203,7 +204,7 @@
 							<div class="how-it-works-info">
 								<h3 class="how-it-works-title">Чем торгует робот?</h3>
 								<p class="how-it-works-description">
-									Торговля ведется по 12 валютным парам, которые наиболее подходят под наши алгоритмы.  Для каждой валютной пары подобраны индивидуальные настройки, обеспечивающие наилучшие результаты при наименьших рисках.
+									Торговля ведется по 12 валютным парам, которые наиболее подходят под наши алгоритмы. Для каждой валютной пары подобраны индивидуальные настройки, обеспечивающие наилучшие результаты при наименьших рисках.
 								</p>
 								<button class="button">Попробывать бесплатно</button>
 							</div>
@@ -225,7 +226,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="working-cycle">
+			<div class="working-cycle" id="how-it-works">
 				<div class="container">
 					<div class="working-cycle-wrapper">
 						<h2 class="working-cycle-title">Как мы работаем?</h2>
@@ -254,7 +255,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="robots" id="robots">
+			<div class="robots" id="tarrifs">
 				<div class="container">
 					<div class="robots-wrapper">
 						<div class="robots-info">
@@ -274,55 +275,61 @@
 						</div>
 						<div class="robots-slider swiper our-plans-slider">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide card accent">
-									<h6 class="card-subtitle">TRADE FOX</h6>
-									<h3 class="card-title">HEDGE</h3>
-									<ul class="card-list">
-										<li><p>3 вида настроек</p></li>
-										<li><p>Торговля в 2-х направлениях</p></li>
-										<li><p>Минимальные Риски</p></li>
-									</ul>
-									<p class="card-price">40 000 ₽</p>
-									<div class="card-buttons">
-										<button class="button">Купить</button>
-										<a href="">Попробывать бесплатно</a>
+								<div class="swiper-slide">
+									<div class="card accent">
+										<h6 class="card-subtitle">TRADE FOX</h6>
+										<h3 class="card-title">HEDGE</h3>
+										<ul class="card-list">
+											<li><p>3 вида настроек</p></li>
+											<li><p>Торговля в 2-х направлениях</p></li>
+											<li><p>Минимальные Риски</p></li>
+										</ul>
+										<p class="card-price">40 000 ₽</p>
+										<div class="card-buttons">
+											<button class="button">Купить</button>
+											<a href="">Попробывать бесплатно</a>
+										</div>
 									</div>
 								</div>
-								<div class="swiper-slide card green">
-									<h6 class="card-subtitle">TRADE FOX</h6>
-									<h3 class="card-title">NETTING</h3>
-									<ul class="card-list">
-										<li><p>3 вида настроек</p></li>
-										<li><p>Один ордер на одну пару</p></li>
-										<li><p>Минимальные Риски</p></li>
-									</ul>
-									<p class="card-price">100 000 ₽</p>
-									<div class="card-buttons">
-										<button class="button">Купить</button>
-										<a href="">Попробывать бесплатно</a>
+								<div class="swiper-slide">
+									<div class="card green">
+										<h6 class="card-subtitle">TRADE FOX</h6>
+										<h3 class="card-title">NETTING</h3>
+										<ul class="card-list">
+											<li><p>3 вида настроек</p></li>
+											<li><p>Один ордер на одну пару</p></li>
+											<li><p>Минимальные Риски</p></li>
+										</ul>
+										<p class="card-price">100 000 ₽</p>
+										<div class="card-buttons">
+											<button class="button">Купить</button>
+											<a href="">Попробывать бесплатно</a>
+										</div>
 									</div>
 								</div>
-								<div class="swiper-slide card red">
-									<h6 class="card-subtitle">TRADE FOX</h6>
-									<h3 class="card-title">AGRESSIVE PRO</h3>
-									<ul class="card-list">
-										<li><p>Продукт для проф. трейдеров</p></li>
-										<li><p>Высокая доходность</p></li>
-										<li><p>Повышенные риски</p></li>
-									</ul>
-									<p class="card-price">300 000 ₽</p>
-									<div class="card-buttons">
-										<button class="button">Купить</button>
-										<a href="">Попробывать бесплатно</a>
+								<div class="swiper-slide">
+									<div class="card red">
+										<h6 class="card-subtitle">TRADE FOX</h6>
+										<h3 class="card-title">AGRESSIVE PRO</h3>
+										<ul class="card-list">
+											<li><p>Продукт для проф. трейдеров</p></li>
+											<li><p>Высокая доходность</p></li>
+											<li><p>Повышенные риски</p></li>
+										</ul>
+										<p class="card-price">300 000 ₽</p>
+										<div class="card-buttons">
+											<button class="button">Купить</button>
+											<a href="">Попробывать бесплатно</a>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="swiper-pagination"></div>
+							<div class="swiper-pagination dot-pagination"></div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="questions">
+			<div class="questions" id="faq">
 				<div class="container">
 					<div class="questions-wrapper">
 						<h2 class="questions-title">Часто задаваемые вопросы</h2>
@@ -330,9 +337,9 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">Как долго будет работать робот?
+										<h5 class="question-title">Как долго будет работать робот?
 											<span class="arrow"></span>
-										</h6>
+										</h5>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>
@@ -341,9 +348,9 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">Как долго будет работать робот?
+										<h5 class="question-title">Как долго будет работать робот?
 											<span class="arrow"></span>
-										</h6>
+										</h5>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>
@@ -352,9 +359,9 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">Насколько надёжен продукт и какие гарантии вы даёте?
+										<h5 class="question-title">Насколько надёжен продукт и какие гарантии вы даёте?
 											<span class="arrow"></span>
-										</h6>
+										</h5>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>
@@ -363,9 +370,9 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">Насколько надёжен продукт и какие гарантии вы даёте?
+										<h5 class="question-title">Насколько надёжен продукт и какие гарантии вы даёте?
 											<span class="arrow"></span>
-										</h6>
+										</h5>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>
@@ -374,10 +381,10 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">
+										<h5 class="question-title">
 											Сколько можно заработать с роботом?
 											<span class="arrow"></span>
-										</h6>
+										</h5>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>
@@ -386,10 +393,10 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">
+										<h5 class="question-title">
 											Сколько можно заработать с роботом?
 											<span class="arrow"></span>
-										</h6>
+										</h5>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>
@@ -398,10 +405,10 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">
+										<h5 class="question-title">
 											С какой суммы можно начать?
 											<span class="arrow"></span>
-										</h6>
+										</h5>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>
@@ -410,10 +417,10 @@
 							<div class="question">
 								<details>
 									<summary>
-										<h6 class="question-title">
+										<h5 class="question-title">
 										С какой суммы можно начать?
 										<span class="arrow"></span>
-									</h6>
+									</h5>
 									</summary>
 									<p class="question-description">
 										Продукт успешно работает и показывает стабильные результаты с 2017 года, постоянно совершенствуется, как в плане доходности, так и в плане надежности. Гарантий на высокодоходные инвестиции не бывает, поэтому нужно оценивать свои возможности при пополнении депозита и оценивать риски. К тому же, если продукт не будет работать, мы вернём за него деньги.</p>

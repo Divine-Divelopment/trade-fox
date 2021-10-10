@@ -1,5 +1,11 @@
+@import 'mixins'
+
 .about-wrapper
 	padding-top: 100px
+	@include md
+		padding-top: 60px
+	@include sm
+		padding-top: 40px
 
 .about-info 
 	display: flex
@@ -13,11 +19,19 @@
 	display: flex
 	gap: 60px
 	margin-top: 20px
+	@include sm
+		gap: 30px
+		margin-top: 15px
+	@include xs 
+		gap: 15px
 
 .about-numbers-title
 	font-size: 64px
 	line-height: 1.25
-
+	@include md 
+		font-size: 50px
+	@include sm
+		font-size: 40px
 .about-numbers-description
 	color: var(--title-color)
 
@@ -27,12 +41,23 @@
 .about-info-description
 	line-height: 1.67
 	margin-top: 32px
+	@include md
+		margin-top: 25px
+	@include sm
+		margin-top: 15px
 	span
 		display: inline-block
 		margin-bottom: 30px
+		@include md
+			margin-bottom: 20px
+		@include sm
+			margin-bottom: 15px
 
 .about-info-text
 	flex: 1 1 50%
+	@include md
+		flex: 1 1 auto
+		width: 100%
 
 .about-info-image
 	flex: 1 1 50%
@@ -40,6 +65,8 @@
 		width: 100%
 		height: auto
 		border-radius: var(--block-radius)
+	@include md
+		display: none
 
 .slider-wrapper
 	position: relative
@@ -56,6 +83,8 @@
 		justify-content: center
 		margin: 0
 		padding: 0
+		@include md
+			display: none
 
 	.swiper-button-prev
 		left: -34px
@@ -82,17 +111,26 @@
 .our-team-slider
 	padding-top: 60px
 	padding-bottom: 0
+	@include md
+		padding-top: 40px
+	@include sm
+		padding-top: 20px
 
 .person 
 	picture
 		display: block	
 		width: 100%
 		height: 329px
+		@include md
+			height: auto
 		img
 			display: block
 			width: 100%
 			height: 100%
+			object-fit: contain
 			border-radius: var(--block-radius)
+			@include md
+				height: auto
 
 .how-it-works
 	margin-top: 50px
@@ -106,11 +144,21 @@
 	align-items: center
 	align-content: center
 	justify-content: space-between
-
+	@media (max-width: 1366px) 
+		padding: 50px
+	@include md
+		margin-top: 50px
+		flex-direction: column
+		padding: 30px
+	@include sm
+		padding: 15px
+		margin-top: 30px
 	.how-it-works-info
 		padding: 50px
 		button
 			margin-top: 26px
+		@media (max-width: 1366px) 
+			padding: 0
 
 	.how-it-works-title
 		margin-bottom: 15px
@@ -124,19 +172,56 @@
 			top: 50%
 			left: 0
 			transform: translateY(-50%)
-
+		@media (max-width: 1366px) 
+			flex: 0 0 50%
+			img
+				position: static
+				transform: none
+				width: 100%
+				height: 100%
+				object-position: center
+				object-fit: contain
+		@include md
+			margin-top: 30px
+		@include sm
+			margin-top: 15px
 	&.reverse
 		flex-direction: row-reverse
-
+		@include md
+			flex-direction: column
+		.how-it-works-info
+			@media (max-width: 1366px) 
+				padding: 0 0 0 50px
+			@include md
+				padding: 0
 		.how-it-works-image
 			position: relative
-			width: 50%
 			img
 				position: absolute
 				top: 50%
 				left: auto
 				right: 0
 				transform: translateY(-50%)
+			@media (max-width: 1366px) 
+				flex: 0 0 50%
+				img
+					position: static
+					transform: none
+					width: 100%
+					height: 100%
+					object-position: center
+					object-fit: contain
+			@include md
+				flex: 0 0 100%
+				max-width: 400px
+				img
+					position: static
+					transform: none
+					width: 100%
+					height: 100%
+					object-position: center
+					object-fit: contain
+
 
 .working-cycle-wrapper
 	display: flex
@@ -144,19 +229,36 @@
 
 .working-cycle
 	margin-top: 150px
+	@include md
+		margin-top: 100px
+	@include sm
+		margin-top: 40px
+	@include xs 
+		margin-top: 20px
 
 .working-cycle-items
 	display: flex
 	margin-top: 45px
 	gap: 30px
+	@include md
+		gap: 20px
+		flex-wrap: wrap
+		margin-top: 30px
+	@include sm
+		margin-top: 15px
 
 .working-cycle-item
 	flex: 1 1 25%
 	margin-bottom: 30px
+	@include md
+		flex: 1 1 calc(50% - 10px)
+		margin-bottom: 0
 
 .working-cycle-title
 	font-weight: 300
 	margin-top: 30px
+	@include md
+		margin-top: 15px
 
 .working-cycle-description
 	margin-top: 10px
@@ -172,16 +274,29 @@
 	display: flex
 	flex-wrap: wrap
 	margin-top: 15px
+	@include md
+		flex-direction: column
 
 .tobots-text 
 	flex: 0 0 58%
 	padding-right: 72px
 	border-right: 2px solid var(--bg-color-dark)
+	@include md
+		flex: 0 0 auto
+		width: 100%
+		padding: 0
+		border: none
 
 .robots-logos
 	display: flex
 	flex-direction: column
 	padding-left: 72px
+	@include md
+		flex: 0 0 auto
+		width: 100%
+		padding: 0
+		border: none
+		margin-top: 15px
 	img
 		display: block
 		margin: 10px 0
@@ -190,16 +305,42 @@
 .robots-slider 
 	margin-top: 100px
 	margin-bottom: 30px
-	.swiper-pagination
-		display: none
-	.swiper-slide 
+	@include md
+		margin-top: 60px
+	@include sm
+		margin-top: 40px
+	@include xs
+		margin-top: 30px 
+	.swiper-wrapper
+		padding: 20px 0
+	.swiper-slide
+		display: flex
+		align-items: center
+		align-content: center
+		justify-content: center
 		width: 400px
+		height: 100%
+		@include md
+			width: 350px
+		@include sm
+			width: 300px
+		@include xs
+			width: 200px
+			
+		&.swiper-slide-active 
+			.card
+				padding: 60px 40px
+				background-color: #151515
+				margin-top: -20px
+				@include sm
+					padding: 30px 20px
+					margin-top: 0
+	.card
 		padding: 40px
-		background-color: var(--bg-color-darken)
+		background-color: #0C0C0C
 		img
 			width: 100%
 			object-fit: cover
-	.card
 		&.accent
 			--title-color: var(--accent-color)
 		&.red
@@ -216,12 +357,19 @@
 			margin-top: 35px
 			font-weight: 700
 			line-height: 30px
+			@include md
+				font-size: 36px
+			@include sm
+				font-size: 30px
 		&-buttons
 			display: flex
 			align-items: center
 			align-content: center
 			gap: 30px
 			margin-top: 33px
+			@include sm
+				gap: 15px
+				margin-top: 15px
 			a 
 				font-weight: 600
 				font-size: var(--p-font-size)
@@ -254,11 +402,21 @@
 
 .questions
 	margin-top: 100px
+	@include md
+		margin-top: 60px
+	@include sm
+		margin-top: 40px
+	@include xs
+		margin-top: 30px 
 
 .questions-wrapper
 	padding: 76px 25px 40px
 	background-color: var(--bg-color-darken)
 	border-radius: var(--block-radius)
+	@include md
+		padding: 50px 15px 20px
+	@include sm
+		padding: 30px 15px 0
 
 .questions-title
 	width: 100%
@@ -272,6 +430,11 @@
 .question
 	width: 50%
 	padding: 0 25px 20px
+	@include md
+		width: 100%
+		padding: 0 15px 20px
+	@include sm
+		padding: 0 0 20px
 	details 
 		&>summary
 			&::-webkit-details-marker,
@@ -314,10 +477,18 @@
 							border-right-width: 4px
 		&>p
 			padding: 10px 40px 0 20px
+			@include md
+				padding: 10px 0 0 0
 
 .footer 
 	margin-top: 80px
 	margin-bottom: 70px
+	@include md 
+		margin-top: 60px
+		margin-bottom: 40px
+	@include sm
+		margin-top: 30px
+		margin-bottom: 30px
 
 .footer-wrapper
 	display: flex
@@ -325,6 +496,9 @@
 	padding: 72px 25px 50px
 	background-color: var(--bg-color-darken)
 	border-radius: var(--block-radius)
+	@include sm
+		flex-direction: column-reverse
+		padding: 25px 0
 	.small-text
 		line-height: 1.4
 		font-size: var(--smallest-font-size)
@@ -361,6 +535,11 @@
 	flex-direction: column
 	flex: 0 0 44.5%
 	padding: 0 25px
+	@include md 
+		padding: 0 15px
+	@include sm
+		flex: 0 0 auto
+		width: 100%
 
 	.ip-info
 		margin-top: 20px
@@ -381,6 +560,12 @@
 .footer-form
 	flex: 0 0 44.5%
 	padding: 0 75px 0 25px
+	@include md 
+		padding: 0 15px
+	@include sm
+		flex: 0 0 auto
+		width: 100%
+		margin-bottom: 15px
 	form
 		display: flex
 		flex-direction: column
@@ -397,6 +582,10 @@
 			appearance: none
 			border: 1px solid #212121
 			box-shadow: none
+			@include xs
+				padding: 0 15px
+				height: 50px
+				margin-bottom: 15px
 			&::selection
 				color: #ffffff
 				background-color: var(--accent-color)
@@ -408,12 +597,19 @@
 	.group-wrapper
 		display: flex
 		align-items: flex-start
+		@include xs
+			flex-direction: column
+			button
+				width: 100%
 		span
 			display: inline-block
 			padding-left: 20px
 			font-size: var(--smallest-font-size)
 			line-height: 1.5
 			color: #636363
+			@include xs
+				padding-left: 0
+				padding-top: 15px
 
 .social-links
 	display: inline-flex
@@ -424,3 +620,15 @@
 		margin-right: 10px
 		&:last-child
 			margin-right: 0
+
+.swiper-pagination.dot-pagination.swiper-pagination-bullets,
+.team-pagination.dot-pagination.swiper-pagination-bullets
+	display: flex
+	align-items: center
+	justify-content: center
+	bottom: 0
+	.swiper-pagination-bullet
+		background: #151515
+		opacity: 1
+		&-active
+			background: var(--accent-color)

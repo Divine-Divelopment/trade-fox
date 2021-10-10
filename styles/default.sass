@@ -61,7 +61,7 @@ body, html
 	font-family: var(--text-font)
 	background-color: var(--bg-color)
 	position: relative
-
+	scroll-behavior: smooth
 	&.no-scroll
 		height: 100vh
 		overflow: hidden
@@ -92,7 +92,7 @@ ul, ol
 .button
 	display: inline-block                     
 	padding: 21px 29px 19px
-	font-weight: 400
+	font-weight: 500
 	font-size: 18px
 	line-height: .78
 	color: var(--button-text-color)
@@ -103,6 +103,7 @@ ul, ol
 	appearance: none
 	cursor: pointer
 	transition: background-color .3s ease-in-out, border-color .3s ease-in-out, color .3s ease-in-out
+	font-family: var(--text-font)
 	&:hover
 		background-color: var(--button-bg-hover)
 		border-color: var(--button-bg-hover)
@@ -113,5 +114,31 @@ ul, ol
 			border-color: var(--button-color)
 			background-color: var(--button-text-color)
 			color: var(--button-bg)
+	@include sm
+		padding: 14px 20px 13px
+		font-size: 14px
 
-	
+@include md 
+	\:root
+		--h1-font-size: 48px
+		--h2-font-size: 30px
+		--h3-font-size: 30px
+		--h4-font-size: 18px
+		--h5-font-size: 20px
+		--h6-font-size: 18px
+		--p-font-size: 16px
+		--small-font-size: 14px
+		--smaller-font-size: 12px
+		--smallest-font-size: 12px	
+@include sm
+	\:root
+		--h1-font-size: 32px
+		--h2-font-size: 24px
+		--h3-font-size: 24px
+		--h4-font-size: 24px
+		--h5-font-size: 16px
+		--h6-font-size: 14px
+		--p-font-size: 14px
+		--small-font-size: 12px
+		--smaller-font-size: 10px
+		--smallest-font-size: 10px	
