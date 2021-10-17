@@ -7,12 +7,10 @@
 			<meta name="keywords" content="Trade Fox">
 			<meta name="author" content="John Doe">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-			<!-- <meta http-equiv="refresh" content="20" /> -->
-			<!--Styles-->
 			<link rel="stylesheet" href="./styles/default.css" />
-			<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+			<link rel="stylesheet" href="./styles/swiper-bundle.min.css"/>
 			<link rel="stylesheet" href="./styles/first-paint.css" />
-			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" />
+			<link rel="stylesheet" href="./styles/select2.min.css" />
 			<link rel="stylesheet" href="./styles/styles.css" /> 
 	</head>
 	<body>
@@ -155,8 +153,8 @@
 								
 							</div>
 							<div class="swiper-button-prev"></div>
-  						<div class="swiper-button-next"></div>
-  						<div class="team-pagination dot-pagination"></div>
+							<div class="swiper-button-next"></div>
+							<div class="team-pagination dot-pagination"></div>
 						</div>
 						
 					</div>
@@ -452,7 +450,7 @@
 						<p class="white-text">Оставьте свои данные, мы с Вами свяжемся и поможем активировать пробный период</p>
 						<form action="">
 							<input name="name" type="text" placeholder="Ваше имя">
-							<input name="phone" type="tel" placeholder="Ваш номер телефона" inputmode="numeric">
+							<input pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" type="tel" name="phone" placeholder="Ваш номер телефона" required class="form-input" inputmode="numeric">
 							<div class="group-wrapper">
 								<button class="button" type="submit">Отправить</button>
 								<span class="form-info">Нажимая кнопку “Отправить” вы соглашаетесь на обработку персональных данных.</span>
@@ -462,8 +460,22 @@
 				</div>
 			</div>
 		</footer>
-		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-		<script src="https://unpkg.com/ts-select2@0.1.0/dist/ts-select2.min.js"></script>
+
+		<div class="modal" id="thanks-modal">
+			<div class="modal-bg modal-exit"></div>
+			<div class="modal-container">
+				<div id="thanks-block" class="modal-thanks">
+					<h3 class="modal-thanks-title">Ваша заявка отправлена</h3>
+					<p class="modal-thanks-description">
+						Отправьте заявку и мы свяжемся с Вами в ближайшее время для уточнения деталей.
+					</p>
+				</div>
+				<button class="modal-close modal-exit"></button>
+			</div>
+		</div>	
+
+		<script src="./scripts/ts-select2.min.js"></script>
+		<script src="./scripts/swiper-bundle.min.js"></script>
 		<script src="./scripts/index.js"></script>
 
 	</body>
