@@ -15,15 +15,12 @@
 	align-items: center
 	align-content: center
 	justify-content: space-between
-	@include sm
-		flex-wrap: wrap
-		align-content: space-between
 
 .language-select
 	margin-left: auto
 	margin-right: 30px
 	@include md
-		margin-right: 15px
+		margin-right: 25px
 	@include sm
 		margin-left: 0
 	.selected-element	
@@ -107,8 +104,21 @@ span.select2-container--default
 			&:after 
 				background-color: var(--accent-color)
 
+.login-wrapper
+	display: inline-flex
+	align-self: center
+
 .login-button 
 	text-transform: uppercase
+	@include sm
+		font-size: 0
+		margin: 0
+		padding: 6px 4px
+		border-radius: 10px
+	img
+		display: none
+		@include sm
+			display: block
 
 .logo
 	max-width: 40%
@@ -118,8 +128,9 @@ span.select2-container--default
 		align-content: center
 		justify-content: center
 		width: 100%
-		max-width: 100%
-		margin-bottom: 10px
+		max-width: 123px
+		margin-bottom: 0
+		margin-right: auto
 	a
 		display: inline-block
 		img
@@ -156,8 +167,6 @@ span.select2-container--default
 		padding: 40px 0 20px
 	@include sm
 		padding: 30px 0 0
-	@include xs
-		padding-top: 15px
 
 .hero-background
 	position: absolute
@@ -185,13 +194,13 @@ span.select2-container--default
 		&+.button
 			margin-left: 20px
 	@include sm
-		margin-top: 15px
+		margin-top: 30px
 		flex-direction: column
 		.button
 			width: 100%
 			&+.button
 				margin-left: 0
-				margin-top: 15px
+				margin-top: 10px
 
 .hero-title
 	line-height: 1.25
@@ -202,15 +211,23 @@ span.select2-container--default
 		vertical-align: top
 		position: relative
 		top: 8px
+	@include sm
+		--h1-font-size: 28px
+		margin-top: 8px
+		span 
+			display: none
 
 .hero-subtitle
-	font-size: 20px
-	color: var(--accent-color)
-	margin-bottom: 15px&-title
-		font-weight: 400
+	--p-font-size: 20px
+	--text-color: var(--accent-color)
+	margin-bottom: 15px
+	@include sm
+		--p-font-size: 12px
 
 .hero-description
-	font-size: 20px
+	--p-font-size: 20px
+	@include sm
+		--p-font-size: 14px
 
 .advantages
 	display: flex
@@ -223,8 +240,7 @@ span.select2-container--default
 		flex-wrap: wrap
 		margin-top: 50px
 	@include sm
-		margin-top: 40px
-
+		gap: 12px
 
 .advantage
 	display: flex
@@ -237,13 +253,21 @@ span.select2-container--default
 	background-color: var(--bg-color-darken)
 	border-radius: var(--block-radius)
 	@include md
-		flex: 1 1 calc(50% - 15px)
+		justify-content: flex-start
+		flex: 0 0 calc(50% - 15px)
+		padding: 24px 10px
 	@include sm
-		min-width: 280px
+		flex: 0 0 calc(50% - 6px)
+	&-image
+		max-width: 50px
 	&-title
 		margin-top: 21px
 		font-weight: 400
 		line-height: 1.44
 		text-align: center
 		color: var(--title-color)
+		@include sm
+			--h6-font-size: 12px
+			--h6-line-height: 1.4
+			margin-top: 8px
 

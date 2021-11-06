@@ -17,6 +17,8 @@
 	--button-bg-hover: #EB4B08
 	--text-font: 'Montserrat', sans-serif
 	--block-radius: 20px
+	--swiper-pagination-bullet-height: 10px
+	--swiper-pagination-bullet-size: 10px
 
 	--h1-font-size: 60px
 	--h2-font-size: 36px
@@ -79,6 +81,8 @@ ul, ol
 	max-width: 1150px
 	margin: 0 auto
 	padding: 0 15px
+	@include sm
+		padding: 0 22px
 
 .button
 	display: inline-block                     
@@ -95,6 +99,7 @@ ul, ol
 	cursor: pointer
 	transition: background-color .3s ease-in-out, border-color .3s ease-in-out, color .3s ease-in-out
 	font-family: var(--text-font)
+	text-decoration: none
 	&:hover
 		background-color: var(--button-bg-hover)
 		border-color: var(--button-bg-hover)
@@ -106,7 +111,7 @@ ul, ol
 			background-color: var(--button-text-color)
 			color: var(--button-bg)
 	@include sm
-		padding: 14px 20px 13px
+		padding: 18px 20px
 		font-size: 14px
 
 @include md 
