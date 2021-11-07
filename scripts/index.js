@@ -53,7 +53,7 @@ window.addEventListener("load", function() {
 		grabCursor: false,
 		loop: false,
 		centeredSlides: true,
-		slidesPerView: 'auto',
+		slidesPerView: 1,
 		initialSlide: 1,
 		coverflowEffect: {
 			rotate: 0,
@@ -66,7 +66,23 @@ window.addEventListener("load", function() {
 			el: '.swiper-pagination'
 		},
 		breakpoints: {
+			479: {
+				effect: 'coverflow',
+				pagination: false,
+				dragable: false,
+				noSwiping: false,
+				allowSlidePrev: false,
+				allowSlideNext: false,
+				coverflowEffect: {
+					rotate: 0,
+					stretch: 0,
+					depth: 200,
+					modifier: 1,
+					slideShadows: false
+				},	
+			},
 			1120: {
+				effect: 'coverflow',
 				pagination: false,
 				dragable: false,
 				noSwiping: false,

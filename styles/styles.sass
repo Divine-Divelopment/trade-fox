@@ -320,14 +320,23 @@
 	flex-direction: column
 	padding-left: 72px
 	@include md
-		flex: 0 0 auto
-		width: 100%
 		padding: 0
-		border: none
-		margin-top: 15px
+		flex-direction: row
+		gap: 25px
 	img
 		display: block
 		margin: 10px 0
+		@include md
+			flex: 0 0 auto
+			width: auto
+			max-width: 100%
+			padding: 0
+			border: none
+			margin-top: 15px
+		@include sm
+			flex: 1 1 calc(50% - 12.5px)
+			width: calc(50% - 12.5px)
+
 
 .robots-slider 
 	margin-top: 100px
