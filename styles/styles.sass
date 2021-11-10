@@ -269,23 +269,31 @@
 	flex-direction: column
 	flex: 1 1 25%
 	margin-bottom: 30px
+	img
+		@include md
+			width: auto
+			max-width: 50px
+			height: auto
+			max-height: 50px
 	@include md
 		align-items: center
 		flex: 1 1 calc(50% - 10px)
 		margin-bottom: 0
 
-.working-cycle-title
-	font-weight: 300
+
+.working-cycle-item-title
 	margin-top: 30px
 	@include md
-		margin-top: 0
+		margin-top: 8px
 	@include sm
+		font-weight: 300
 		--h6-font-size: 12px
 		text-align: center
 
 .working-cycle-description
 	margin-top: 10px
 	@include sm
+		margin-top: 5px
 		--p-font-size: 11px
 		text-align: center
 
@@ -398,8 +406,16 @@
 			--title-color: var(--green-color)
 		&-subtitle
 			--title-color: #424344
+			@include xs
+				--h6-font-size: 16px
+			@include mobile 
+				--h6-font-size: 14px
 		&-title
 			line-height: .9
+			@include xs
+				--h3-font-size: 28px
+			@include mobile 
+				--h3-font-size: 24px
 		&-price
 			--p-font-size: 42px
 			--text-color: #FFFFFF	
@@ -408,7 +424,7 @@
 			line-height: 30px
 			@include md
 				font-size: 36px
-			@include sm
+			@include mobile 
 				font-size: 30px
 		&-buttons
 			display: flex
@@ -416,6 +432,11 @@
 			align-content: center
 			gap: 30px
 			margin-top: 33px
+			.button 
+				@include xs
+					width: 50%
+				@include mobile 
+					width: auto
 			@include sm
 				gap: 15px
 				margin-top: 15px
@@ -439,6 +460,10 @@
 					--p-font-size: var(--small-font-size)
 					display: inline-block
 					line-height: 1
+					@include xs
+						--p-font-size: 16px
+					@include mobile 
+						--p-font-size: var(--small-font-size)
 				&:before 
 					content: ''
 					display: inline-block

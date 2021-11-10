@@ -63,7 +63,7 @@ window.addEventListener("load", function() {
 		spaceBetween: 0,
 		updateOnWindowResize: true,
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.dot-pagination',
 		},
 		coverflowEffect: {
 			rotate: 0,
@@ -75,13 +75,11 @@ window.addEventListener("load", function() {
 		on: {
 			resize: function () {
 				swiper.update();
-				swiper.pagination.destroy();
 			}
 		},
 		breakpoints: {
 			0: {
 				effect: false,
-				pagination: true,
 				dragable: true,
 				noSwiping: true,
 				allowSlidePrev: true,
@@ -92,7 +90,6 @@ window.addEventListener("load", function() {
 				observer: true,
 				spaceBetween: 30,
 				updateOnWindowResize: true,
-				pagination: true,
 				on: {
 					resize: function () {
 						swiper.update();
@@ -102,7 +99,6 @@ window.addEventListener("load", function() {
 			},
 			479: {
 				effect: 'coverflow',
-				pagination: false,
 				dragable: true,
 				noSwiping: true,
 				slidesPerView: 'auto',
@@ -118,12 +114,10 @@ window.addEventListener("load", function() {
 				},
 				observeParents: true,
 				observer: true,
-				pagination: false,
 				resizeObserver: true,
 				on: {
 					resize: function () {
-						swiper.update()
-						swiper.pagination.destroy();
+						swiper.update();
 					}
 				}
 			},
@@ -144,7 +138,6 @@ window.addEventListener("load", function() {
 				},
 				observeParents: true,
 				observer: true,
-				pagination: false,
 				on: {
 					resize: function () {
 						swiper.update();
