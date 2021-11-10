@@ -1,9 +1,10 @@
 window.addEventListener("load", function() {
 
-	// AOS.init({
-	// 	disable: 'mobile',
-	// 	easing: 'ease-in-out',
-	// },);
+	AOS.init({
+		disable: 'mobile',
+		easing: 'ease-in-out',
+		once: true,
+	},);
 
 
 	const select = document.querySelector('.language-select-list');
@@ -53,33 +54,78 @@ window.addEventListener("load", function() {
 		grabCursor: false,
 		loop: false,
 		centeredSlides: true,
-		slidesPerView: 1,
+		slidesPerView: 'auto',
+		allowSlidePrev: true,
+		allowSlideNext: true,
 		initialSlide: 1,
+		observeParents: true,
+		observer: true,
+		spaceBetween: 0,
+		updateOnWindowResize: true,
+		pagination: {
+			el: '.swiper-pagination',
+		},
 		coverflowEffect: {
 			rotate: 0,
 			stretch: 0,
 			depth: 200,
 			modifier: 1,
-			slideShadows: false
-		},	
-		pagination: {
-			el: '.swiper-pagination'
+			slideShadows: false,
+		},
+		on: {
+			resize: function () {
+				swiper.update();
+				swiper.pagination.destroy();
+			}
 		},
 		breakpoints: {
+			0: {
+				effect: false,
+				pagination: true,
+				dragable: true,
+				noSwiping: true,
+				allowSlidePrev: true,
+				allowSlideNext: true,
+				slidesPerView: 1,
+				initialSlide: 0,
+				observeParents: true,
+				observer: true,
+				spaceBetween: 30,
+				updateOnWindowResize: true,
+				pagination: true,
+				on: {
+					resize: function () {
+						swiper.update();
+						swiper.pagination.init();
+					}
+				}
+			},
 			479: {
 				effect: 'coverflow',
 				pagination: false,
-				dragable: false,
-				noSwiping: false,
-				allowSlidePrev: false,
-				allowSlideNext: false,
+				dragable: true,
+				noSwiping: true,
+				slidesPerView: 'auto',
+				allowSlidePrev: true,
+				allowSlideNext: true,
+				spaceBetween: 0,
 				coverflowEffect: {
 					rotate: 0,
 					stretch: 0,
 					depth: 200,
 					modifier: 1,
-					slideShadows: false
-				},	
+					slideShadows: false,
+				},
+				observeParents: true,
+				observer: true,
+				pagination: false,
+				resizeObserver: true,
+				on: {
+					resize: function () {
+						swiper.update()
+						swiper.pagination.destroy();
+					}
+				}
 			},
 			1120: {
 				effect: 'coverflow',
@@ -88,13 +134,23 @@ window.addEventListener("load", function() {
 				noSwiping: false,
 				allowSlidePrev: false,
 				allowSlideNext: false,
+				spaceBetween: 0,
 				coverflowEffect: {
 					rotate: 0,
 					stretch: 0,
 					depth: 100,
 					modifier: 1,
 					slideShadows: false
-				},	
+				},
+				observeParents: true,
+				observer: true,
+				pagination: false,
+				on: {
+					resize: function () {
+						swiper.update();
+						swiper.pagination.destroy();
+					}
+				}
 			}
 		}
 	});
@@ -104,6 +160,7 @@ window.addEventListener("load", function() {
 		spaceBetween: 0,
 		loop: true,
 		navigation: false,
+		resizeObserver: true,
 		pagination: {
 			el: '.team-pagination'
 		},
