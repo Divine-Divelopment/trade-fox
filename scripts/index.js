@@ -160,14 +160,26 @@ window.addEventListener("load", function() {
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
+				navigation: false,
+				pagination: {
+					el: '.team-pagination'
+				},
 			},
 			480: {
 				slidesPerView: 2,
+				navigation: false,
+				pagination: {
+					el: '.team-pagination'
+				},
 			},
 			768: {
 				slidesPerView: 3,
+				navigation: false,
+				pagination: {
+					el: '.team-pagination'
+				},
 			},
-			1120: {
+			1240: {
 				slidesPerView: 4,
 				navigation: {
 					nextEl: '.swiper-button-next',

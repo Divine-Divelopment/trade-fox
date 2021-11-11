@@ -9,7 +9,12 @@
 
 .about-info 
 	display: flex
+	align-items: center
+	justify-content: space-between
 	gap: 30px
+
+.about-info-title
+	line-height: 1.2
 
 .about-info-subtitle
 	color: #424344
@@ -18,14 +23,12 @@
 .about-numbers
 	display: flex
 	gap: 60px
-	margin-top: 20px
 	@include sm
 		gap: 30px
-		margin-top: 15px
 
 .about-numbers-title
 	--h3-font-size: 64px
-	--h3-line-height: 1.25
+	line-height: 1
 	@include md 
 		--h3-font-size: 50px
 	@include sm
@@ -40,27 +43,27 @@
 
 .about-info-description
 	line-height: 1.67
-	margin-top: 32px
+	margin-top: 25px
 	@include md
-		margin-top: 25px
+		margin-top: 20px
 	@include sm
-		margin-top: 15px
+		margin-top: 10px
 	span
 		display: inline-block
-		margin-bottom: 30px
+		margin-bottom: 20px
 		@include md
-			margin-bottom: 20px
-		@include sm
 			margin-bottom: 15px
+		@include sm
+			margin-bottom: 10px
 
 .about-info-text
-	flex: 1 1 50%
+	flex: 0 0 50%
 	@include md
 		flex: 1 1 auto
 		width: 100%
 
 .about-info-image
-	flex: 1 1 50%
+	flex: 0 0 43%
 	picture, img
 		width: 100%
 		height: auto
@@ -98,6 +101,8 @@
 
 	.swiper-button-prev
 		left: -34px
+		@media screen and (max-width: 1240px)
+			display: none !important
 		&:before
 			content: ''
 			display: block
@@ -109,6 +114,8 @@
 			transform: rotate(-45deg)
 	.swiper-button-next
 		right: -34px
+		@media screen and (max-width: 1240px)
+			display: none !important
 		&:before
 			content: ''
 			display: block
@@ -515,7 +522,7 @@
 				list-style-type: none
 			.question-title
 				display: flex
-				align-items: center
+				align-items: flex-start
 				align-content: center
 				justify-content: space-between
 				@include sm
@@ -525,6 +532,7 @@
 					align-items: center
 					align-content: center
 					justify-content: center
+					flex: 0 0 40px
 					width: 40px
 					height: 40px
 					&:before
