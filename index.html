@@ -318,7 +318,7 @@
 										</ul>
 										<p class="card-price">300 000 ₽</p>
 										<div class="card-buttons">
-											<button class="button">Купить</button>
+											<button data-modal="form-modal" class="button">Купить</button>
 											<a href="">Попробовать бесплатно</a>
 										</div>
 									</div>
@@ -484,11 +484,30 @@
 		<div class="modal" id="thanks-modal">
 			<div class="modal-bg modal-exit"></div>
 			<div class="modal-container">
-				<div id="thanks-block" class="modal-thanks">
+				<div id="thanks-block" class="modal-content">
 					<h3 class="modal-thanks-title">Ваша заявка отправлена</h3>
 					<p class="modal-thanks-description">
 						Отправьте заявку и мы свяжемся с Вами в ближайшее время для уточнения деталей.
 					</p>
+				</div>
+				<button class="modal-close modal-exit"></button>
+			</div>
+		</div>	
+
+		<div class="modal" id="form-modal">
+			<div class="modal-bg modal-exit"></div>
+			<div class="modal-container">
+				<div id="form-block" class="modal-content">
+					<h2 class="footer-title">Оставьте заявку</h2>
+						<p class="white-text">Оставьте свои данные, мы с Вами свяжемся и поможем активировать пробный период</p>
+						<form action="">
+							<input name="name" type="text" placeholder="Ваше имя">
+							<input pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" type="tel" name="phone" placeholder="Ваш номер телефона" required class="form-input" inputmode="numeric">
+							<div class="group-wrapper">
+								<button class="button" type="submit">Отправить</button>
+								<span class="form-info">Нажимая кнопку “Отправить” вы соглашаетесь на обработку персональных данных.</span>
+							</div>
+						</form>
 				</div>
 				<button class="modal-close modal-exit"></button>
 			</div>

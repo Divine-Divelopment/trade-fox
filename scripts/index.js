@@ -195,19 +195,23 @@ window.addEventListener("load", function() {
 
 		modals.forEach(function(trigger) {
 			trigger.addEventListener('click', function(event) {
-				console.log(event)
+				console.log(trigger.dataset.modal)
 				event.preventDefault();
+				const body = document.body;
 				const modal = document.getElementById(trigger.dataset.modal);
 				modal.classList.add('open');
+				body.classList.add('no-scroll');
 				const exits = modal.querySelectorAll('.modal-exit');
 				exits.forEach(function(exit) {
 					exit.addEventListener('click', function(event) {
 						event.preventDefault();
 						modal.classList.remove('open');
+						body.classList.remove('no-scroll');
 					});
 					document.onkeydown = function(e) {
 						if (e.key === 'Escape') {
 							modal.classList.remove('open');
+							body.classList.remove('no-scroll');
 						}
 					};
 				});
