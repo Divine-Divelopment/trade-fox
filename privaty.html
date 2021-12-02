@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+			<meta charset="UTF-8" />
+			<title>Trade Fox</title>
+			<meta name="description" content="Trade Fox">
+			<meta name="keywords" content="Trade Fox">
+			<meta name="author" content="John Doe">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+			<link rel="stylesheet" href="./styles/default.css" />
+			<link rel="stylesheet" href="./styles/aos.css" />
+			<link rel="stylesheet" href="./styles/swiper-bundle.min.css"/>
+			<link rel="stylesheet" href="./styles/first-paint.css" />
+			<link rel="stylesheet" href="./styles/select2.min.css" />
+			<link rel="stylesheet" href="./styles/styles.css" /> 
+	</head>
+	<body>
+		<header class="header" data-aos="fade-zoom-in" data-aos-duration="500" data-aos-offset="0">
+			<div class="container">
+				<div class="header-wrapper">
+					<div class="logo">
+						<a href="">
+							<img src="./assets/logo.svg" width="229" height="53" alt="Логотип">
+						</a>
+					</div>
+					<div class="language-select">
+						<select class="language-select-list">
+							<option value="RU" selected>RU</option>
+							<option value="EN">EN</option>
+						</select>
+					</div>
+					<div class="login-wrapper">
+						<a href="/" class="button login-button">
+						Войти
+						<img src="./assets/header-arrow.svg" alt="">
+					</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="privacy-block">
+				<div class="container">
+					<div class="privacy">
+						<h2>Политика в отношении обработки персональных данных</h2>
+						<ol>
+							<li>
+								<h4>1. Общие положения</h4>
+								<p>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» (далее - Закон о персональных данных) и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые ИП Шайхлисламов Тимур Флюрович (далее – Оператор).</p>
+								<p>1.1. Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.</p>
+								<p>1.2. Настоящая политика Оператора в отношении обработки персональных данных (далее – Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта https://trade-fox.com.</p>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer" id="contacts">
+			<div class="container">
+				<div class="footer-wrapper" data-aos="fade-down" data-aos-duration="200">
+					<div class="footer-info" data-aos="fade-right" data-aos-duration="200" data-aos-delay="200">
+						<h2 class="footer-title">Остались вопросы?</h2>
+						<div data-aos="fade-right">
+							<a href="tel:+79600389788" class="phone-link">+7 (960) 038-97-88</a>
+						</div>
+						<div data-aos="fade-right">
+							<a href="mailto:info@trade-fox.com" class="white-link">info@trade-fox.com</a>
+						</div>
+						<p class="white-text address">г.Казань, ул. Дзержинского 12</p>
+						<ul class="social-links">
+							<li>
+								<a href="">
+									<img src="./assets/social1.svg" width="31" height="30" alt="Instagram">
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="./assets/social2.svg" width="31" height="30" alt="Telegram">
+								</a>
+							</li>
+						</ul>
+						<p class="footer-text ip-info">ИП Шайхлисламов Т.Ф. ИНН 026402379255</p>
+						<div>
+							<a href="/privaty" class="footer-link">Политика конфиденциальности</a>
+						</div>
+						<p class="footer-text develop">
+							Сайт разработан: 
+							<a href="//monkeygarden.ru/" class="footer-link">MonkeyGarden</a>
+						</p>
+						<span class="small-text"><span>*</span>Указанная доходность не является гарантированной. Торговля на валютных рынках сопряжена с рисками потери средств.</span>
+					</div>
+					<div class="footer-form" data-aos="fade-left" data-aos-duration="200" data-aos-delay="200">
+						<h2 class="footer-title">Оставьте заявку</h2>
+						<p class="white-text">Оставьте свои данные, мы с Вами свяжемся и поможем активировать пробный период</p>
+						<form action="">
+							<input name="name" type="text" placeholder="Ваше имя">
+							<input pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" type="tel" name="phone" placeholder="Ваш номер телефона" required class="form-input" inputmode="numeric">
+							<div class="group-wrapper">
+								<button class="button" type="submit">Отправить</button>
+								<span class="form-info">Нажимая кнопку “Отправить” вы соглашаетесь на обработку персональных данных.</span>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div class="modal" id="thanks-modal">
+			<div class="modal-bg modal-exit"></div>
+			<div class="modal-container">
+				<div id="thanks-block" class="modal-content">
+					<h3 class="modal-thanks-title">Ваша заявка отправлена</h3>
+					<p class="modal-thanks-description">
+						Отправьте заявку и мы свяжемся с Вами в ближайшее время для уточнения деталей.
+					</p>
+				</div>
+				<button class="modal-close modal-exit"></button>
+			</div>
+		</div>	
+
+		<div class="modal" id="form-modal">
+			<div class="modal-bg modal-exit"></div>
+			<div class="modal-container">
+				<div id="form-block" class="modal-content">
+					<h2 class="footer-title">Оставьте заявку</h2>
+						<p class="white-text">Оставьте свои данные, мы с Вами свяжемся и поможем активировать пробный период</p>
+						<form action="">
+							<input name="name" type="text" placeholder="Ваше имя">
+							<input pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" type="tel" name="phone" placeholder="Ваш номер телефона" required class="form-input" inputmode="numeric">
+							<div class="group-wrapper">
+								<button class="button" type="submit">Отправить</button>
+								<span class="form-info">Нажимая кнопку “Отправить” вы соглашаетесь на обработку персональных данных.</span>
+							</div>
+						</form>
+				</div>
+				<button class="modal-close modal-exit"></button>
+			</div>
+		</div>	
+
+		<script src="./scripts/aos.js"></script>
+		<script src="./scripts/ts-select2.min.js"></script>
+		<script src="./scripts/swiper-bundle.min.js"></script>
+		<script src="./scripts/index.js"></script>
+
+	</body>
+</html>
