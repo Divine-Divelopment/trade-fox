@@ -6,6 +6,20 @@ window.addEventListener("load", function() {
 		once: true,
 	},);
 
+	const smoothScroll = () => {
+		const links = document.querySelectorAll('.hader-link');
+		links.forEach((item) => {
+			item.addEventListener('click', function(event) {
+				event.preventDefault();
+				const href = event.target.getAttribute('href')
+				const id = href.substring(1, href.length)
+				document.getElementById(id).scrollIntoView({
+					behavior: 'smooth',
+				});
+			})
+		})
+	}
+
 
 	const select = document.querySelector('.language-select-list');
 	const baseUrl = "./assets";
@@ -192,29 +206,22 @@ window.addEventListener("load", function() {
 
 	const modalsBlock = function () {
 		const modals = document.querySelectorAll('[data-modal]');
+		const exits = document.querySelectorAll('.modal-exit');
+		const body = document.body;
 
 		modals.forEach(function(trigger) {
 			trigger.addEventListener('click', function(event) {
-				console.log(trigger.dataset.modal)
 				event.preventDefault();
-				const body = document.body;
 				const modal = document.getElementById(trigger.dataset.modal);
 				modal.classList.add('open');
 				body.classList.add('no-scroll');
-				const exits = modal.querySelectorAll('.modal-exit');
-				exits.forEach(function(exit) {
-					exit.addEventListener('click', function(event) {
-						event.preventDefault();
-						modal.classList.remove('open');
-						body.classList.remove('no-scroll');
-					});
-					document.onkeydown = function(e) {
-						if (e.key === 'Escape') {
-							modal.classList.remove('open');
-							body.classList.remove('no-scroll');
-						}
-					};
-				});
+			});
+		});
+		exits.forEach(function(exit) {
+			exit.addEventListener('click', function(event) {
+				event.preventDefault();
+				event.target.closest('.modal').classList.remove('open');
+				body.classList.remove('no-scroll');
 			});
 		});
 	};
@@ -245,7 +252,6 @@ window.addEventListener("load", function() {
 
 		forms.forEach((form) => {
 			form.addEventListener("submit", e => {
-				console.log(form)
 				e.preventDefault();
 
 				let xhr = new XMLHttpRequest();
@@ -254,6 +260,7 @@ window.addEventListener("load", function() {
 				let action = '../send.php';
 				const modal = document.getElementById('thanks-modal');
 				const modalForm = document.getElementById('form-modal');
+				const body = document.body;
 
 				xhr.open(method, action);
 
@@ -265,7 +272,8 @@ window.addEventListener("load", function() {
 						modalForm.classList.remove('open');
 						modal.classList.add('open');
 						setTimeout(() => {
-							modal.classList.remove('open')
+							modal.classList.remove('open');
+							body.classList.remove('open');
 						},5000);
 					} else {
 						console.log("HTTP error", xhr.status, xhr.statusText);
@@ -276,5 +284,6 @@ window.addEventListener("load", function() {
 		})
 	};
 
-	modalsBlock()
+	modalsBlock();
+	smoothScroll();	
 });
